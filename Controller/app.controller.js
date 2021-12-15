@@ -13,10 +13,15 @@
             })
 
             // route for the about page
-            .when('/about', {
-                templateUrl : 'Viem/localstorage.view.html',
-                controller  : 'aboutCtrl'
+            .when('/Home', {
+                templateUrl : 'View/comentsl.view.html',
+                controller  : 'coments-controller'
             })
+
+            // .when('/Calendar', {
+            //     templateUrl : 'Viem/localstorage.view.html',
+            //     controller  : 'localstorage-controller'
+            // })
 
             // route for the contact page
             // .when('/contact', {

@@ -1,1 +1,2 @@
 "# Angular Js" 
+"# npm install"

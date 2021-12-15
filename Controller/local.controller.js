@@ -1,4 +1,4 @@
-var app= angular.module("ToDoList-module",["LocalStorageModule"]);
+var app= angular.module("index-template");
     app.controller("localstorage-controller",function($scope,localStorageService){
         $scope.name="Desde Controller";
        
@@ -11,7 +11,6 @@ var app= angular.module("ToDoList-module",["LocalStorageModule"]);
         }
         
 
-        // $scope.activity.fecha=new Date();
 
         $scope.AddActivity=function(){
             console.log($scope.activity);

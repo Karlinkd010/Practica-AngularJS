@@ -1,0 +1,12 @@
+html, body{
+    width: 100%;
+ }
+ body{
+    padding: 0;
+    margin: 0;
+    background-color: lightgrey;
+ }
+
+ .container{
+    margin-top: 5% !important;
+ }

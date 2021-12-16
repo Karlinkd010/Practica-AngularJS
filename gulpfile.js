@@ -51,7 +51,7 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task("start", gulp.series("build", "browser-sync"), function (done) {
+gulp.task("default", gulp.series("build", "browser-sync"), function (done) {
     devMode = true;
     gulp.watch(["./app/css/**/*.css'"], ["css"]);
     gulp.watch(["./app/js/**/*.js"], ["js"]);

@@ -8,11 +8,11 @@
 
             // route for the home page
             .when('/', {
-                templateUrl : 'View/comentsl.view.html',
+                templateUrl : 'view/comentsl.view.html',
                 controller  : 'coments-controller'
             })
             .when('/Calendar', {
-                templateUrl : 'View/localstorage.view.html',
+                templateUrl : 'view/localstorage.view.html',
                 controller  : 'localstorage-controller'
             })
 

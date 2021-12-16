@@ -1,0 +1,30 @@
+{
+  "name": "app-angularjs",
+  "version": "1.0.0",
+  "description": "\"# Angular Js\"",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-local-storage": "^0.7.1",
+    "angular-route": "^1.8.2",
+    "angularfire": "^2.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karlinkd010/Practica-AngularJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karlinkd010/Practica-AngularJS/issues"
+  },
+  "homepage": "https://github.com/Karlinkd010/Practica-AngularJS#readme"
+}

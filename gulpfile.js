@@ -16,6 +16,7 @@ gulp.task('css', function() {
         .pipe(browserSync.reload({
             stream: true
         }));
+
 });
 
 gulp.task('js', function() {
@@ -33,13 +34,11 @@ gulp.task('html', function() {
         .pipe(browserSync.reload({
             stream: true
         }));
-});
 
-gulp.task("build",
-    gulp.series(gulp.parallel("css", "js", "html"), function (done) {
-        done();
-    })
-);
+});
+gulp.task('build', function() {
+    gulp.start(['css', 'js', 'html'])
+});
 
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
@@ -50,11 +49,35 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
-gulp.task("default", gulp.series("build", "browser-sync"), function (done) {
+gulp.task('default', function() {
     devMode = true;
-    gulp.watch(["./app/css/**/*.css'"], ["css"]);
-    gulp.watch(["./app/js/**/*.js"], ["js"]);
-    gulp.watch(["./app/template/**/*.html"], ["html"]);
- done();
+    gulp.start(['build', 'browser-sync']);
+    gulp.watch(['./app/css/**/*.css'], ['css']);
+    gulp.watch(['./app/js/**/*.js'], ['js']);
+    gulp.watch(['./app/template/**/*.html'], ['html']);
 });
+
+// gulp.task("build",
+//     gulp.series(gulp.parallel("css", "js", "html"),  async function (done) {
+//         done();
+//     })
+// );
+
+// gulp.task('browser-sync', function() {
+//     browserSync.init(null, {
+//         open: false,
+//         server: {
+//             baseDir: 'dist',
+//         }
+        
+//     });
+// });
+
+
+// gulp.task("default", gulp.series("build", "browser-sync"),   function (done) {
+//     devMode = true;
+//     gulp.watch(["./app/css/**/*.css'"], ["css"]);
+//     gulp.watch(["./app/js/**/*.js"], ["js"]);
+//     gulp.watch(["./app/template/**/*.html"], ["html"]);
+//  done();
+// });

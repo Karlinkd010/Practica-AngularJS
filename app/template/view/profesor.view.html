@@ -1,0 +1,66 @@
+<h1>Profesor</h1>
+<h4>{{profesor.nombre}}</h4>
+<hr>
+
+<div class="row">
+    
+    <!-- Div que contiene la imagen del profesor -->
+    <div class="col-sm-5">
+        <section class="panel">
+            <div class="panel-body" align="center">
+                <img ng-src="{{profesor.foto}}" class="rounded-circle border border-primary" alt="" width="150px" height="150px">
+            </div>
+        </section>
+    </div>
+
+    <!-- Div, donde se mostrará la bio del profesor -->
+    <div class="col-sm-7">
+        <section class="panel">
+            <div class="panel-body">
+               {{profesor.bio}}
+                <br>
+                <br>
+                <strong>Edad:</strong> {{profesor.edad}}  
+                <br> 
+                <div class="d-grid gap-2 mx-auto" align="center">
+                    <button class="btn  btn-warning" ng-click="Editar()" >Editar</button>
+
+                </div>
+              
+            </div>
+        </section>
+    </div>
+
+
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm-5">
+        <section class="panel border border-primary " style=" border-radius:5%;">
+            <div class="panel-body" style="margin: 2%;">
+                
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Profesor:</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre del Profesor" ng-model="editarProfesor.nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edacd:</label>
+                    <input type="text" class="form-control" id="edad" placeholder="Edad del profesor" ng-model="editarProfesor.edad">
+                </div>
+                <div class="mb-3">
+                    <label for="biografia" class="form-label">Biografía:</label>
+                    <textarea type="text" class="form-control" rows="3" id="biografia" placeholder="Nombre del Profesor" ng-model="editarProfesor.bio"></textarea>
+                </div>
+                <div class="mb-3 d-grid gap-2 mx-auto" align="center">
+                    <button class="btn  btn-info" ng-click="Guardar()" >Agregar</button>
+
+                    <button class="btn  btn-danger" ng-click="Cancelar()" >Cancelar</button>
+                </div>
+
+                
+            </div>
+        </section>
+    </div>
+
+
+</div>

@@ -1,7 +1,7 @@
 [
     "./node_modules/angular/angular.js",
     "./node_modules/angular-local-storage/dist/angular-local-storage.min.js",
-    "./node_modules/angular-route/angular-route.min.js",
+    "./node_modules/angular-route/angular-route.js",
     "./node_modules/angularfire/dist/angularfire.min.js",
     "./app/js/**/*.js"
 ]

@@ -1,20 +1,24 @@
 var app =angular.module("index-template");
 
 app.controller("profesor-controller", function($scope){
+	$scope.mostrar=false;
 	$scope.profesor=profesorData;
 	$scope.editarProfesor=[];
 	console.log($scope.profesor);
 
 	$scope.Editar= function(){
+		$scope.mostrar=true;
 		angular.copy($scope.profesor, $scope.editarProfesor);
 
 	}
 	$scope.Guardar=function(){
+		$scope.mostrar=false;
 		angular.copy($scope.editarProfesor, $scope.profesor);
 		
 	}
 	$scope.Cancelar=function(){
-		$scope.editarProfesor={};
+		$scope.editarProfesor={}
+		$scope.mostrar=false;;
 	}
 
 });

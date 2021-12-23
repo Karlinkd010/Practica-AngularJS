@@ -1,0 +1,69 @@
+<div class="container">
+
+    <h1>Filtros</h1>
+    <h4>Para el ng-repeat</h4>
+    <hr>
+    <div class="row mt-3" >
+        <div class="col-sm-6">
+            <section class="panel" >
+                <div class="panel-body" style="margin: 2%;">
+                    <h4>Busqueda</h4>
+                    
+                    <div class="mb-4">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese lo que desea buscar" ng-model="busqueda.nombre">
+                    </div>
+                    <div class="mb-4">
+                        <label for="sexo" class="form-label">Sexo:</label>
+                        <select ng-model="busqueda.sexo" class="form-control">
+                            <option value="" >Cualquiera</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                    </div>
+                
+    
+                    
+                </div>
+            </section>
+        </div>
+    
+    
+    </div>
+    <table class="table table-striped w-auto">
+
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Avatar</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Teléfono</th>
+            <th>Celular</th>
+          
+          </tr>
+        </thead>
+        <tbody >
+            
+            <td>{{persona.id}}</td>
+            <tr ng-repeat="persona in personas | filter:busqueda">
+            <td><img src="img/{{persona.avatar}}" class="rounded-circle border border-primary" style="width: 75px; height: 75px"></td>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.sexo}}</td>
+            <td>{{persona.telefono}}</td>
+            <td>{{persona.celular}}</td>
+          </tr>
+         
+        </tbody>
+      
+      
+      </table>
+
+
+
+
+
+
+
+</div>
+

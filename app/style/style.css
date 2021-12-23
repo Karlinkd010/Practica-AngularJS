@@ -24,3 +24,7 @@ html, body{
     border-radius:5%;
 
  }
+ .avatar{
+   width: 75px;
+   height: 75px;
+}

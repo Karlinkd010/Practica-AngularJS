@@ -24,6 +24,10 @@
                 templateUrl : 'view/profesor.view.html',
                 controller  : 'profesor-controller'
             })
+            .when('/Personas', {
+                templateUrl : 'view/personas.view.html',
+                controller  : 'personas-controller'
+            })
             .when('/Login', {
                 templateUrl : '',
                 controller  : ''

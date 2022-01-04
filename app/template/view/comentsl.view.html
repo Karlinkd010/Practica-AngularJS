@@ -1,57 +1,50 @@
+<div class="container-sm mt-10">
+  <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Usuario" ng-model="newComentario.usuario">
+  </div>
+  <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="newComentario.comentario"></textarea>
+  </div>
+  <button class="btn btn-primary" ng-click="Agregar()">Agregar</button>
 
-    <div class="container-sm mt-10">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Usuario</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Usuario" ng-model="newComentario.usuario">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="newComentario.comentario"></textarea>
-            
-        </div>
-        <button class="btn btn-primary" ng-click="Agregar()">Agregar</button>
+</div>
 
-    </div>
+<div class="container-sm">
+    <h3>Comentarios</h3>
+    <ul>
+        <li ng-repeat="comentario in cometarios">
+            {{comentario.comentario }}- <strong> {{comentario.usuario }}</strong>
+            <br>
+        </li>
+    </ul>
+</div>
 
-    <div class="container-sm">
-        <h3>Comentarios</h3>
-        <ul>
-            <li ng-repeat="comentario in cometarios">
-                {{comentario.comentario }}- <strong> {{comentario.usuario }}</strong>
-                <br>
-            </li>
-        </ul>
-    </div>
-    <div class="container-sm">
+<div class="container-sm">
         <h3>Heroes</h3>
-        <!--Table-->
-<table class="table table-striped w-auto">
+    <table class="table table-striped w-auto">
 
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Nombre</th>
-        <th>Publicado</th>
-        <th>Alter</th>
-        <th>Primera Aparición</th>
-        <th>Actor</th>
-      </tr>
-    </thead>
-    <tbody >
-      <tr ng-repeat="Heroe in heroes">
-      
-        <td>{{Heroe.id}}</td>
-        <td>{{Heroe.superhero}}</td>
-        <td>{{Heroe.publisher}}</td>
-        <td>{{Heroe.alter_ego}}</td>
-        <td>{{Heroe.first_appearance}}</td>
-        <td>{{Heroe.characters}}</td>
-      </tr>
-     
-    </tbody>
-  
-  
-  </table>
-  <!--Table-->
-    </div>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Publicado</th>
+          <th>Alter</th>
+          <th>Primera Aparición</th>
+          <th>Actor</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr ng-repeat="Heroe in heroes">    
+          <td>{{Heroe.IdAlumnoTitulo}}</td>
+          <td>{{Heroe.Nombre }}</td>
+          <td>{{Heroe.FechaNacimiento}}</td>
+          <td>{{Heroe.CorreoElectronico}}</td>
+          <td>{{Heroe.Matricula}}</td>
+          <td>{{Heroe.EstatusAlumno}}</td>
+        </tr>     
+      </tbody>
+    </table>
+</div>
     

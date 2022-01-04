@@ -3,7 +3,7 @@
 var app = angular.module('index-template');
 app.controller('personas-controller', ['$scope', function($scope){
  
-
+$scope.tablePersonas='tables/tables.view.html'
 $scope.personas=[
       {
         "id": 0,

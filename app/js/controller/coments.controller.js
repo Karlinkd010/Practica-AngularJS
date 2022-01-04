@@ -20,7 +20,7 @@ var app= angular.module("index-template");
             $scope.newComentario={};
         }
 
-        $http.get("http://localhost:3000/heroes")
+        $http.get("https://localhost:44367/api/Alumno")
             .then(function(data){
                 
                 $scope.heroes=data.data;

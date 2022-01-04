@@ -1,0 +1,29 @@
+<table class="table table-striped w-auto">
+
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Avatar</th>
+        <th data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ordenar"><a ng-click="columna='nombre'; reverse= !reverse;">Nombre</th>
+        <th><a ng-click="columna='sexo'; reverse= !reverse;">Sexo</th>
+        <th>Teléfono</th>
+        <th>Celular</th>
+      
+      </tr>
+    </thead>
+    <tbody >
+        
+        
+        <tr ng-repeat="persona in personas | filter:busqueda |orderBy:columna:reverse ">
+        <td>{{persona.id}}</td>
+        <td><img src="img/{{persona.avatar}}" class="rounded-circle border border-primary" style="width: 75px; height: 75px"></td>
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.sexo}}</td>
+        <td>{{persona.telefono}}</td>
+        <td>{{persona.celular}}</td>
+      </tr>
+     
+    </tbody>
+  
+  
+</table>

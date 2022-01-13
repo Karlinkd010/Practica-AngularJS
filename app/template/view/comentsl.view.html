@@ -20,37 +20,4 @@
         </li>
     </ul>
 </div>
-<h3 style="text-align: center;">LISTA DE ALUMNOS TITULADOS</h3>
-<br> 
-<div class="row" style="display: flex;        
-justify-content: center;">
-       
-    <table class="table table-striped">
 
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Mátricula</th>
-          <th>Nombre</th>
-          <th>Fecha de Nacimiento</th>
-          <th>Correo electrónico</th>
-          <th>Estátus</th>
-        </tr>
-      </thead>
-      <tbody >
-        <tr ng-repeat="Heroe in heroes | limitTo:pagina | limitTo:-15">    
-          <td>{{Heroe.idAlumnoTitulo}}</td>
-          <td>{{Heroe.matricula}}</td>
-          <td>{{Heroe.nombre }} {{Heroe.primerApellido}} {{Heroe.segundoApellido}}</td>
-          <td>{{Heroe.fechaNacimiento}}</td>
-          <td>{{Heroe.correoElectronico}}</td>
-          <td>{{Heroe.estatusAlumno}} </td>
-        </tr>     
-      </tbody>
-    </table>
-    <br>
-    
-    <button type="button" style="width: 10%; margin: 10px;" class="btn btn-primary" ng-click="anterior()">Anterior</button>
-    <button type="button" style="width: 10%; margin: 10px;" class="btn btn-secondary" ng-click="siguiente()">Siguiente</button>
-</div>
-    

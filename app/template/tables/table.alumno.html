@@ -1,0 +1,46 @@
+<div class="row" style="display: flex;        
+justify-content: center;">
+       
+    <table class="table table-striped">
+
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Mátricula</th>
+          <th>Nombre</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Correo electrónico</th>
+          <th>Estátus</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr ng-repeat="Heroe in heroes | limitTo:pagina | limitTo:-15">    
+          <td>{{Heroe.idAlumnoTitulo}}</td>
+          <td>{{Heroe.matricula}}</td>
+          <td>{{Heroe.nombre }} {{Heroe.primerApellido}} {{Heroe.segundoApellido}}</td>
+          <td>{{Heroe.fechaNacimiento}}</td>
+          <td>{{Heroe.correoElectronico}}</td>
+          <td>{{Heroe.estatusAlumno}} </td>
+        </tr>     
+      </tbody>
+    </table>
+    <br>
+    <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-primary" type="button" ng-click="anterior()">
+        <i class="fa fa-arrow-circle-left"></i>
+        Anterior
+        
+      </button>
+      <button class="btn btn-secondary" type="button" ng-click="siguiente()">
+        Siguiente 
+        <i class="fa fa-arrow-circle-right"></i>
+      </button>
+      <button class="btn btn-secondary" type="button">
+        {{pagina}} - {{totalpage}}
+        <i class="fa fa-book"></i>
+      </button>
+    </div>
+    
+   
+</div>
+    

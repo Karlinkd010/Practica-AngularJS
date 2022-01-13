@@ -28,6 +28,10 @@
                 templateUrl : 'view/personas.view.html',
                 controller  : 'personas-controller'
             })
+            .when('/Alumno', {
+                templateUrl : 'view/alumno.view.html',
+                controller  : 'alumno-controller'
+            })
             .when('/Login', {
                 templateUrl : '',
                 controller  : ''

@@ -32,6 +32,10 @@
                 templateUrl : 'view/alumno.view.html',
                 controller  : 'alumno-controller'
             })
+            .when('/Alumno/Ver/:codigo', {
+                templateUrl : 'view/alumno.ver.view.html',
+                controller  : 'alumno-ver-controller'
+            })
             .when('/Login', {
                 templateUrl : '',
                 controller  : ''

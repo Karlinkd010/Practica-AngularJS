@@ -1,9 +1,82 @@
 
-<H1>Hola{{ mensaje }}</H1>
+<H1>Hola{{  }}</H1>
 
-<p> 
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto odit laboriosam saepe! Quae,
-    consequuntur quidem eum quo quibusdam soluta nemo veritatis. Nostrum placeat in quidem officia, 
-    excepturi numquam vel architecto.
-</p>
+  <form style="width: 80%;">
 
+    <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input type="text" class="form-control" ng-model="alumno.nombre">
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input type="text" class="form-control" ng-model="alumno.primerApellido" >
+          </div>
+        </div>
+      <div class="col">
+        <div class="form-group">
+            <label for="Nombre">Primer Apelido</label>
+            <input type="text" class="form-control" ng-model="alumno.segundoApellido" >
+           
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+          <div class="form-group">
+              <label for="curp">Curp</label>
+              <input type="text" class="form-control" ng-model="alumno.curp" >
+            </div>
+          </div>
+        <div class="col">
+          <div class="form-group">
+              <label for="Nombre">Fecha de Nacimiento</label>
+              <input type="text" class="form-control" ng-model="alumno.fechaNacimiento" >
+             
+            </div>
+        </div>
+      </div>
+
+   
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+<!-- campus: "00001"
+correoElectronico: "diarqroventas@gmail.com"
+curp: "FUMJ820503HDFNRH01"
+estatusAlumno: false
+estatusAlumnoSep: "Error: Número de RVOE no válido en el nodo Carr..."
+fechaNacimiento: "0001-01-01T00:00:00"
+folioControl: "UNEAQ_01_220090_00000000003_UGRD_0_01"
+folioControlCancelacion: "UNEAQ_01_220090_00000000003_UGRD_0_01"
+folioDigital: null
+genero: "M"
+hashVerificacion: null
+idAlumnoTitulo: 19430
+idConcentradora: "ZONA_CENTRO"
+idInstitucion: "220090"
+idMotivocancelacion: null
+idPaquetePdf: null
+idPaqueteTitulo: 3789
+ligaPdf: null
+ligaXml: null
+matricula: "00000000004"
+noCertificadoAutoridad: null
+nombre: "JHONATAN ANTONIO "
+nombreInstitucion: null
+pdf: false
+periodo: null
+primerApellido: "FUENTES"
+segundoApellido: "MORENO"
+selloAutenticacion: null
+selloTitulo: null
+versionAutenticacion: null
+xml: false -->
